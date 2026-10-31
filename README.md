@@ -112,8 +112,8 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 #### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ReEng.git
-cd ReEng
+git clone https://github.com/<your-username>/vxe-r1se-plus-driver-decomp.git
+cd vxe-r1se-plus-driver-decomp
 
 # Install dependencies
 pip install -r requirements.txt
@@ -197,7 +197,7 @@ Comprehensive documentation of the COMPX 16-byte framing protocol, EEPROM memory
 ## Repository Structure
 
 ```
-ReEng/
+vxe-r1se-plus-driver-decomp/
 ├── .github/
 │   └── workflows/
 │       └── build.yml             # GitHub Actions automated PyInstaller build CI
