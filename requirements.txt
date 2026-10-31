@@ -1,2 +1,1 @@
 hidapi>=0.14.0
-pyinstaller>=6.0.0

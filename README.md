@@ -1,6 +1,6 @@
 # R1SE_Portable: VXE R1 SE+ Configuration Tool & Protocol
 
-[![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://github.com)
+![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)
 [![Python](https://img.shields.io/badge/python-3.8+-brightgreen.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Hardware Verified](https://img.shields.io/badge/Hardware-Verified-success.svg)](#hardware-verification-status)
@@ -54,7 +54,7 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 - [x] DPI stage indicator RGB LED colors
 - [x] Performance modes: Daily mode vs Game Competitive mode
 - [x] Sensor parameters: Motion Sync, Straight-Line Correction (Angle Snapping), Ripple Correction
-- [x] Key debounce timing (0–20 ms) and idle sleep timeout (seconds)
+- [x] Key debounce timing (0, 1, 2, 4, 8, 15, or 20 ms) and idle sleep timeout
 - [x] Lift-off distance (LOD: 1 mm / 2 mm)
 - [x] Wireless Far-Distance (Ultra Long Range) mode (`cmd 22/23`)
 - [x] DPI LED light modes (Steady / Breathing), brightness, and animation speed
@@ -98,7 +98,7 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 
 ### Option 1: Standalone Executable (Recommended)
 
-1. Download the latest `R1SE_Portable.exe` from the [Releases](https://github.com) page.
+1. Download the latest `R1SE_Portable.exe` from the [Releases](releases) page.
 2. Plug in your mouse or 2.4 GHz wireless dongle.
 3. Run `R1SE_Portable.exe` (no installation required).
 
@@ -167,8 +167,8 @@ python R1SE_Portable/src/r1se_tool.py import mouse_backup.json --apply
 To compile the portable standalone executable:
 
 ```bash
-# Install PyInstaller
-pip install pyinstaller hidapi
+# Install PyInstaller and hidapi
+pip install hidapi pyinstaller
 
 # Run the build script
 cd R1SE_Portable
@@ -211,7 +211,6 @@ vxe-r1se-plus-driver-decomp/
 │   │   ├── dpi_table_3395se.json # PAW3395SE sensor DPI lookup table
 │   │   ├── r1se_gui.py           # Portable Tkinter graphical user interface
 │   │   └── r1se_tool.py          # Core library & CLI interface
-│   └── requirements.txt          # Python dependencies
 ├── research/
 │   ├── README.md                 # Reverse engineering notes & reproduction steps
 │   └── hub_screenshot.png        # Reference vendor application UI screenshot
