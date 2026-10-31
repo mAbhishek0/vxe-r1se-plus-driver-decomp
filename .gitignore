@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging / PyInstaller
+.Python
+build/
+develop-eggs/
+dist/*.exe
+*.exe
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# PyInstaller temporary output
+build/
+
+# Application runtime files & logs
+r1se_config.json
+r1se_errors.log*
+*.log
+
+# AI agent & IDE workspace state
+.claude/
+.cline_storage/
+.playwright-mcp/
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Large proprietary research vendor dumps & nested upstream repositories
+# (Omitted from git to prevent copyright issues and exceed GitHub's 100MB limit)
+research/atk_hub_extracted/
+research/rea_repo/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Operating system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*

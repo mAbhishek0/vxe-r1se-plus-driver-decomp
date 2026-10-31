@@ -1,0 +1,58 @@
+name: Build Portable Executable
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build R1SE_Portable.exe
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build executable with PyInstaller
+        working-directory: ./R1SE_Portable
+        run: |
+          python -m PyInstaller --clean --noconfirm --onefile --windowed --name R1SE_Portable `
+            --add-data "src/dpi_table_3395se.json;." `
+            --paths "src" `
+            --distpath dist `
+            --workpath build `
+            --specpath build `
+            src/r1se_gui.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: R1SE_Portable-Windows
+          path: |
+            R1SE_Portable/dist/R1SE_Portable.exe
+            R1SE_Portable/dist/README.txt
+
+      - name: Create Release and Upload Assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            R1SE_Portable/dist/R1SE_Portable.exe
+            R1SE_Portable/dist/README.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
