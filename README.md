@@ -8,7 +8,7 @@
 
 A lightweight, portable, telemetry-free configuration tool and reverse-engineered HID protocol documentation for the **VXE / ATK R1 SE+** gaming mouse (PAW3395SE sensor).
 
-Unlike the bloated official vendor software (ATK Hub), this tool requires **no installation**, **no background services**, and **no network tracking**. It runs as a standalone native GUI or a scriptable CLI. Protocol decompilation analysis and reverse-engineering research were conducted using **[morluto/rea](https://github.com/morluto/rea)** alongside AI pair programming with **Claude Sonnet 5.5** and **Claude Opus 5.5**.
+Unlike the bloated official vendor software (ATK Hub), this tool requires **no installation**, **no background services**, and **no network tracking**. It runs as a standalone native GUI or a scriptable CLI.
 
 ---
 
@@ -182,6 +182,8 @@ The compiled binary will be located at `R1SE_Portable/dist/R1SE_Portable.exe`.
 
 ## Protocol Documentation & Research
 
+The protocol was uncovered by statically analyzing the vendor's Electron client using [morluto/rea](https://github.com/morluto/rea) for codebase exploration, with decompilation and Python implementation developed alongside Claude Sonnet 5.5 and Claude Opus 5.5.
+
 Comprehensive documentation of the COMPX 16-byte framing protocol, EEPROM memory addresses, command IDs, and sensor tables is available:
 
 - 📄 **[Protocol Specification Document](R1SE_Portable/docs/PROTOCOL.md)**:
@@ -190,9 +192,8 @@ Comprehensive documentation of the COMPX 16-byte framing protocol, EEPROM memory
   - Sensor-specific encoding (PAW3395SE non-linear lookup table)
   - Command ID catalog and unsolicited status report formats
 - 🔬 **[Research & Extraction Methodology](research/README.md)**:
-  - Reverse engineering process and static analysis background
-  - Static decompilation and bundle navigation powered by [morluto/rea](https://github.com/morluto/rea) with Claude Sonnet 5.5 and Claude Opus 5.5
-  - Notes on vendor bundle structure
+  - Step-by-step reproduction of the ASAR extraction and static analysis
+  - Notes on vendor bundle structure and excluded binaries
 
 ---
 
