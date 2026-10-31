@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.8+-brightgreen.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Hardware Verified](https://img.shields.io/badge/Hardware-Verified-success.svg)](#hardware-verification-status)
+[![Latest Release](https://img.shields.io/github/v/release/mAbhishek0/vxe-r1se-plus-driver-decomp?color=blue)](https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp/releases/latest)
 
 A lightweight, portable, telemetry-free configuration tool and reverse-engineered HID protocol documentation for the **VXE / ATK R1 SE+** gaming mouse (PAW3395SE sensor).
 
@@ -24,6 +25,7 @@ Unlike the bloated official vendor software (ATK Hub), this tool requires **no i
 - [Building from Source](#building-from-source)
 - [Protocol Documentation & Research](#protocol-documentation--research)
 - [Repository Structure](#repository-structure)
+- [Acknowledgements](#acknowledgements)
 - [Disclaimer & License](#disclaimer--license)
 
 ---
@@ -98,7 +100,7 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 
 ### Option 1: Standalone Executable (Recommended)
 
-1. Download the latest `R1SE_Portable.exe` from the [Releases](https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp/releases) page.
+1. Download the latest `R1SE_Portable.exe` from the [Releases](https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp/releases) page (or [Direct Download](https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp/releases/latest/download/R1SE_Portable.exe)).
 2. Plug in your mouse or 2.4 GHz wireless dongle.
 3. Run `R1SE_Portable.exe` (no installation required).
 
@@ -219,6 +221,13 @@ vxe-r1se-plus-driver-decomp/
 ├── README.md                     # Main repository documentation
 └── requirements.txt              # Project dependencies
 ```
+
+---
+
+## Acknowledgements
+
+- **[morluto/rea](https://github.com/morluto/rea)**: For the open-source reverse-engineering framework and tooling that assisted in analyzing and navigating the vendor codebase during research.
+- **Anthropic Claude (Sonnet & Opus)**: For AI pair programming, decompilation analysis, and code assistance throughout the project.
 
 ---
 

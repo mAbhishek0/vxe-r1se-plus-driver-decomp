@@ -47,3 +47,11 @@ If you wish to inspect the vendor bundles or verify the offsets yourself:
 ## Included Files
 
 - `hub_screenshot.png`: Reference screenshot of the vendor application UI for verifying feature mappings and controls.
+
+
+---
+
+## Acknowledgements
+
+- **[morluto/rea](https://github.com/morluto/rea)**: Open-source reverse-engineering assistant and toolkit used to explore and inspect vendor binaries.
+- **Anthropic Claude (Sonnet & Opus)**: For AI-assisted static reverse-engineering, decompilation analysis, and code generation.
