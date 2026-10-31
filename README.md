@@ -8,7 +8,7 @@
 
 A lightweight, portable, telemetry-free configuration tool and reverse-engineered HID protocol documentation for the **VXE / ATK R1 SE+** gaming mouse (PAW3395SE sensor).
 
-Unlike the bloated official vendor software (ATK Hub), this tool requires **no installation**, **no background services**, and **no network tracking**. It runs as a standalone native GUI or a scriptable CLI.
+Unlike the bloated official vendor software (ATK Hub), this tool requires **no installation**, **no background services**, and **no network tracking**. It runs as a standalone native GUI or a scriptable CLI. Protocol decompilation analysis and reverse-engineering research were conducted using **[morluto/rea](https://github.com/morluto/rea)** alongside AI pair programming with **Claude Sonnet 5.5** and **Claude Opus 5.5**.
 
 ---
 
@@ -25,7 +25,6 @@ Unlike the bloated official vendor software (ATK Hub), this tool requires **no i
 - [Building from Source](#building-from-source)
 - [Protocol Documentation & Research](#protocol-documentation--research)
 - [Repository Structure](#repository-structure)
-- [Acknowledgements](#acknowledgements)
 - [Disclaimer & License](#disclaimer--license)
 
 ---
@@ -192,6 +191,7 @@ Comprehensive documentation of the COMPX 16-byte framing protocol, EEPROM memory
   - Command ID catalog and unsolicited status report formats
 - 🔬 **[Research & Extraction Methodology](research/README.md)**:
   - Reverse engineering process and static analysis background
+  - Static decompilation and bundle navigation powered by [morluto/rea](https://github.com/morluto/rea) with Claude Sonnet 5.5 and Claude Opus 5.5
   - Notes on vendor bundle structure
 
 ---
@@ -221,13 +221,6 @@ vxe-r1se-plus-driver-decomp/
 ├── README.md                     # Main repository documentation
 └── requirements.txt              # Project dependencies
 ```
-
----
-
-## Acknowledgements
-
-- **[morluto/rea](https://github.com/morluto/rea)**: For the open-source reverse-engineering framework and tooling that assisted in analyzing and navigating the vendor codebase during research.
-- **Anthropic Claude (Sonnet & Opus)**: For AI pair programming, decompilation analysis, and code assistance throughout the project.
 
 ---
 

@@ -6,7 +6,7 @@ This directory contains research, static analysis artifacts, and methodology not
 
 ## Source of Truth
 
-The protocol definition was derived from static reverse-engineering of the official vendor software (ATK Hub / VXE Web & Electron application) and verified against live physical hardware (VXE R1 SE+ via 2.4 GHz wireless dongle `373B:1085`, firmware version `3.15`).
+The protocol definition was derived from static reverse-engineering and decompilation of the official vendor software (ATK Hub / VXE Web & Electron application) assisted by [morluto/rea](https://github.com/morluto/rea) with Claude Sonnet 5.5 and Claude Opus 5.5, and verified against live physical hardware (VXE R1 SE+ via 2.4 GHz wireless dongle `373B:1085`, firmware version `3.15`).
 
 For complete protocol details, packet framing, and EEPROM address mapping, refer to:
 👉 **[`../R1SE_Portable/docs/PROTOCOL.md`](../R1SE_Portable/docs/PROTOCOL.md)**
@@ -47,11 +47,3 @@ If you wish to inspect the vendor bundles or verify the offsets yourself:
 ## Included Files
 
 - `hub_screenshot.png`: Reference screenshot of the vendor application UI for verifying feature mappings and controls.
-
-
----
-
-## Acknowledgements
-
-- **[morluto/rea](https://github.com/morluto/rea)**: Open-source reverse-engineering assistant and toolkit used to explore and inspect vendor binaries.
-- **Anthropic Claude (Sonnet & Opus)**: For AI-assisted static reverse-engineering, decompilation analysis, and code generation.
