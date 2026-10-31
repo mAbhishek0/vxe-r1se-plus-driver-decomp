@@ -217,6 +217,7 @@ vxe-r1se-plus-driver-decomp/
 ├── research/
 │   ├── README.md                 # Reverse engineering notes & reproduction steps
 │   └── hub_screenshot.png        # Reference vendor application UI screenshot
+├── .gitattributes                # Line-ending normalization
 ├── .gitignore                    # Ignores large vendor dumps, binaries, and caches
 ├── LICENSE                       # MIT License
 ├── README.md                     # Main repository documentation
