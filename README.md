@@ -98,7 +98,7 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 
 ### Option 1: Standalone Executable (Recommended)
 
-1. Download the latest `R1SE_Portable.exe` from the [Releases](releases) page.
+1. Download the latest `R1SE_Portable.exe` from the [Releases](https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp/releases) page.
 2. Plug in your mouse or 2.4 GHz wireless dongle.
 3. Run `R1SE_Portable.exe` (no installation required).
 
@@ -112,7 +112,7 @@ The configuration commands and EEPROM layouts were derived via static reverse-en
 #### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/vxe-r1se-plus-driver-decomp.git
+git clone https://github.com/mAbhishek0/vxe-r1se-plus-driver-decomp.git
 cd vxe-r1se-plus-driver-decomp
 
 # Install dependencies
